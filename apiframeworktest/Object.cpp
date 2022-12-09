@@ -67,10 +67,10 @@ void Object::FinalUpdate()
 void Object::Render(HDC _dc)
 {
 	Rectangle(_dc,
-		 (int)(m_vPos.x - m_vScale.x / 2.f)
-		,(int)(m_vPos.y - m_vScale.y / 2.f)
-		,(int)(m_vPos.x + m_vScale.y / 2.f)
-		,(int)(m_vPos.y + m_vScale.y / 2.f));
+		 (int)(m_vPos.x - m_vScale.x / 2.f)  // left
+		,(int)(m_vPos.y - m_vScale.y / 2.f)  // top
+		,(int)(m_vPos.x + m_vScale.y / 2.f)  // right
+		,(int)(m_vPos.y + m_vScale.y / 2.f)); // bottom
 	Component_Render(_dc);
 }
 
