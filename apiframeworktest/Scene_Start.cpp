@@ -10,6 +10,7 @@
 #include "KeyMgr.h"
 #include "SceneMgr.h"
 #include "SoundMgr.h"
+#include "Platform.h"
 Scene_Start::Scene_Start()
 {
 }
@@ -22,8 +23,17 @@ void Scene_Start::Enter()
 	SoundMgr::GetInst()->LoadSound(L"BGM", true, L"Sound\\pianobgm.wav");
 	SoundMgr::GetInst()->Play(L"BGM");
 	// Object 추가
+	Vec2 vResolution(Vec2(Core::GetInst()->GetResolution()));
+
+	Object* platform = new Platform;
+	platform->SetPos(Vec2(vResolution.x/2, vResolution.y /2 + 200));
+	platform->SetScale(Vec2(1000.f, 20.f));
+	platform->SetCollider();
+	AddObject(platform, GROUP_TYPE::PLATFORM);
+
 	Object* pObj = new Player;
-	pObj->SetPos(Vec2(Core::GetInst()->GetResolution().x/2, Core::GetInst()->GetResolution().y/2));
+	pObj->SetName(L"Player");
+	pObj->SetPos(Vec2(vResolution.x/2, vResolution.y/2));
 	pObj->SetScale(Vec2(100.f,100.f));
 	AddObject(pObj, GROUP_TYPE::PLAYER);
 
@@ -42,7 +52,6 @@ void Scene_Start::Enter()
 	//AddObject(pMonsterObj, GROUP_TYPE::MONSTER);
 
 	// 몬스터 배치
-	Vec2 vResolution(Vec2(Core::GetInst()->GetResolution()));
 	int iMonster = 16;
 	float fMoveDist = 25.f;
 	float fObjScale = 50.f;

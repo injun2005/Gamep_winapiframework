@@ -7,7 +7,6 @@ class Player :
 {
 private:
     Image* m_pImage;
-    bool isGround;
 public:
     Player();
     //Player(const Player& _origin) 
@@ -26,6 +25,5 @@ public:
     void EnterCollision(Collider* _pOther) override;
     void StayCollision(Collider* _pOther) override;
     void ExitCollision(Collider* _pOther) override;
-    void SetGround(bool value);
 };
 

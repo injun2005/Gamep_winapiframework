@@ -15,6 +15,8 @@ Object::Object()
 	, m_pCollider(nullptr)
 	, m_pAnimator(nullptr)
 	, m_bAlive(true)
+	, isGround(false)
+	, gravity(0)
 {
 }
 
@@ -25,6 +27,7 @@ Object::Object(const Object& _origin)
 	, m_pCollider(nullptr)
 	, m_pAnimator(nullptr)
 	, m_bAlive(true)
+	, isGround(false)
 {
 	if (_origin.m_pCollider)
 	{
@@ -72,6 +75,14 @@ void Object::Render(HDC _dc)
 		,(int)(m_vPos.x + m_vScale.y / 2.f)  // right
 		,(int)(m_vPos.y + m_vScale.y / 2.f)); // bottom
 	Component_Render(_dc);
+}
+
+void Object::SetCollider()
+{
+	Vec2 objScale = GetScale();
+
+	CreateCollider();
+	GetCollider()->SetScale(objScale);
 }
 
 void Object::Component_Render(HDC _dc)
