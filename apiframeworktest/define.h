@@ -43,7 +43,7 @@ enum class GROUP_TYPE
 	BULLET_PLAYER,
 	BULLET_MONSTER,
 	MONSTER,
-
+	GaugeBar,
 	END = 32,
 };
 
@@ -53,6 +53,7 @@ enum class SCENE_TYPE
 	SCENE_01,
 	TOOL,
 	SCENE_02,
+	Dead,
 	END,
 };
 
