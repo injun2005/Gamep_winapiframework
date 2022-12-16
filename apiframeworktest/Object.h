@@ -12,6 +12,8 @@ private:
 	Animator* m_pAnimator;
 	wstring m_strName;
 	bool    m_bAlive;
+	bool	isGround;
+	float gravity;
 public:
 	void SetPos(Vec2 _vPos) { m_vPos = _vPos; }
 	void SetScale(Vec2 _vScale) { m_vScale = _vScale; }
@@ -24,8 +26,12 @@ public:
 	void SetName(const wstring& _strName) { m_strName = _strName; }
 	const wstring& GetName() { return m_strName; }
 	bool IsDead() { return !m_bAlive; }
+	bool GetisGround() { return isGround; }
+	void SetGround(bool value) { isGround = value; }
+	void SetGravity(float value) { gravity = value; }
+	float GetGravity() { return gravity; }
 private:
-	void SetDead() { m_bAlive = false; }
+	void SetDead() { m_bAlive = false; } 
 	friend class EventMgr;
 public:
 	virtual void	Update() abstract;
@@ -34,7 +40,7 @@ public:
 	virtual void	StayCollision(Collider* _pOther) {}
 	virtual void	EnterCollision(Collider* _pOther) {}
 	virtual void	ExitCollision(Collider* _pOther) {}
-
+	void SetCollider();
 
 	void	Component_Render(HDC _dc);
 

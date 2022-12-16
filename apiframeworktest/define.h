@@ -43,6 +43,7 @@ enum class GROUP_TYPE
 	BULLET_PLAYER,
 	BULLET_MONSTER,
 	MONSTER,
+	PLATFORM,
 	GaugeBar,
 	END = 32,
 };

@@ -20,6 +20,7 @@ public:
 	void AddObject(Object* _pObj, GROUP_TYPE _eType)
 	{
 		m_vecObj[(UINT)_eType].push_back(_pObj);
+		//_pObj->SetGroupType((UINT)_eType);
 	}
 	const vector<Object*>& GetGroupObject(GROUP_TYPE _eType)
 	{

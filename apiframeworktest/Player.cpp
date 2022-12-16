@@ -19,7 +19,6 @@ Player::Player()
 
 	// image 업로드
 	Image* pImg = ResMgr::GetInst()->ImgLoad(L"PlayerAni", L"Image\\jiwoo.bmp");
-
 	// animator 생성 및 animation 사용
 	CreateAnimator();
 	GetAnimator()->CreateAnimation(L"Jiwoofront", pImg, Vec2(0.f, 150.f), Vec2(50.f, 50.f), Vec2(50.f, 0.f), 5, 0.2f);
@@ -38,6 +37,11 @@ Player::~Player()
 void Player::Update()
 {
 	Vec2 vPos = GetPos();
+	float gravity = GetGravity();
+	if (!GetisGround()) {
+		SetGravity(gravity + 10 * fDT);
+		vPos.y += gravity;
+	}
 	if(KEY_HOLD(KEY::UP))
 	{
 		vPos.y -= 300.f * fDT;
@@ -54,29 +58,24 @@ void Player::Update()
 	{
 		vPos.x += 300.f * fDT;
 	}
-	if (KEY_TAP(KEY::SPACE))
-	{
-		CreateBullet();
+	else {
+		if (KEY_TAP(KEY::SPACE))
+		{
+			Jump();
+		}
 	}
 	SetPos(vPos);
 	GetAnimator()->Update();
+
+
 }
 
-void Player::CreateBullet()
+void Player::Jump()
 {
-	Vec2 vBulletPos = GetPos();
-	vBulletPos.y -= GetScale().y / 2.f;
-
-	// 
-	Bullet* pBullet = new Bullet;
-	pBullet->SetName(L"Bullet_Player");
-	pBullet->SetPos(vBulletPos);
-	pBullet->SetScale(Vec2(25.f, 25.f));
-	pBullet->SetDir(Vec2(0.f, -1.f));
-	CreateObject(pBullet, GROUP_TYPE::BULLET_PLAYER);
-	//Scene* pCurScene = SceneMgr::GetInst()->GetCurScene();
-	//pCurScene->AddObject(pBullet,GROUP_TYPE::BULLET);
+	
 }
+
+
 void Player::Render(HDC _dc)
 {
 	Component_Render(_dc);
@@ -101,3 +100,19 @@ void Player::Render(HDC _dc)
 	//    , RGB(255,0,255));
 
 }
+
+void Player::EnterCollision(Collider* _pOther)
+{
+}
+
+void Player::StayCollision(Collider* _pOther)
+{
+
+}
+
+void Player::ExitCollision(Collider* _pOther)
+{
+
+}
+
+

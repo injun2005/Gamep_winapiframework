@@ -15,12 +15,15 @@ public:
     //{}
     ~Player();
 private:
-    void CreateBullet();
+    void Jump();
 
 //    Player* Clone{ return new Player(*this); }
     CLONE(Player);
 public:
     void Update()       override;
     void Render(HDC _dc) override;
+    void EnterCollision(Collider* _pOther) override;
+    void StayCollision(Collider* _pOther) override;
+    void ExitCollision(Collider* _pOther) override;
 };
 
