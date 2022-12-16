@@ -22,6 +22,7 @@ public:
 	UINT GetID() {	return m_iID; }
 	Vec2 GetFinalPos() { return m_vFinalPos; }
 	Object* GetObj() { return m_pOwner; }
+	UINT GetCheck() { return m_iCheck; }
 public:
 	void FinalUpdate();
 	void Render(HDC _dc);
