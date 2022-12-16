@@ -3,6 +3,8 @@
 #include "Scene_Start.h"
 #include "Scene_01.h"
 #include "EventMgr.h"
+#include "DeadScene.h"
+
 SceneMgr::SceneMgr()
 	: m_pCurScene(nullptr)
 	, m_arrScene{}
@@ -35,6 +37,8 @@ void SceneMgr::Init()
 	m_arrScene[(UINT)SCENE_TYPE::START]->SetName(L"Start Scene");
 	m_arrScene[(UINT)SCENE_TYPE::SCENE_01] = new Scene_01;
 	m_arrScene[(UINT)SCENE_TYPE::SCENE_01]->SetName(L"Scene 01");
+	m_arrScene[(UINT)SCENE_TYPE::Dead] = new DeadScene;
+	m_arrScene[(UINT)SCENE_TYPE::Dead]->SetName(L"Dead");
 
 //	m_arrScene[(UINT)SCENE_TYPE::TOOL] = new Scene_Tool;
 //	m_arrScene[(UINT)SCENE_TYPE::SCENE_02] = new Scene02;

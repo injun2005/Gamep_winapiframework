@@ -3,6 +3,7 @@
 #include "Object.h"
 #include "Player.h"
 #include "Monster.h"
+#include "GaugeBar.h"
 #include "Core.h"
 #include "Image.h"
 #include "PathMgr.h"
@@ -36,6 +37,12 @@ void Scene_Start::Enter()
 	pObj->SetPos(Vec2(vResolution.x/2, vResolution.y/2));
 	pObj->SetScale(Vec2(100.f,100.f));
 	AddObject(pObj, GROUP_TYPE::PLAYER);
+
+	//GaugeBar Ãß°¡
+	Object* pGBar = new GaugeBar;
+	pObj->SetPos(Vec2(1,1));
+	pObj->SetScale(Vec2(100.f, 100.f));
+	AddObject(pGBar, GROUP_TYPE::GaugeBar);
 
 //	Object* pOtherPlayer = new Player(*(Player*)pObj);
 	/*Object* pOtherPlayer = pObj->Clone();
