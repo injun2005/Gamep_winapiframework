@@ -191,6 +191,9 @@
       <Filter>Engine\04. Object\GaugeBar</Filter>
     </ClInclude>
     <ClInclude Include="DeadScene.h" />
+    <ClInclude Include="Platform.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="apiframeworktest.rc">
@@ -289,5 +292,8 @@
       <Filter>Engine\04. Object\GaugeBar</Filter>
     </ClCompile>
     <ClCompile Include="DeadScene.cpp" />
+    <ClCompile Include="Platform.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
