@@ -7,6 +7,9 @@ class Player :
 {
 private:
     Image* m_pImage;
+    bool isJump;
+    float jumpTIme;
+    float jumpPower;
 public:
     Player();
     //Player(const Player& _origin) 

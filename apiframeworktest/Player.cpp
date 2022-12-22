@@ -11,7 +11,7 @@
 #include "Collider.h"
 #include "Animator.h"
 #include "Animation.h"
-Player::Player()
+Player::Player() : isJump(false), jumpTIme(0)
 {
 	// collider 새성
 	CreateCollider();
@@ -23,7 +23,7 @@ Player::Player()
 	CreateAnimator();
 	GetAnimator()->CreateAnimation(L"Jiwoofront", pImg, Vec2(0.f, 150.f), Vec2(50.f, 50.f), Vec2(50.f, 0.f), 5, 0.2f);
 	GetAnimator()->Play(L"Jiwoofront", true);
-
+	jumpPower = 3.3f;     
 	// animation offset 위로 올리기. 
 	Animation* pAnim = GetAnimator()->FindAnimation(L"Jiwoofront");
 	for(size_t i=0;i<pAnim->GetMaxFrame();i++)
@@ -39,8 +39,18 @@ void Player::Update()
 	Vec2 vPos = GetPos();
 	float gravity = GetGravity();
 	if (!GetisGround()) {
-		SetGravity(gravity + 10 * fDT);
+		SetGravity(gravity + 1 * fDT);
 		vPos.y += gravity;
+	}
+	if (isJump) {
+		float jumpHeight =  ((jumpTIme * jumpTIme)- (jumpPower * jumpTIme)) / 4.f;
+		jumpTIme += 0.01f;
+		if (jumpTIme > jumpPower) {
+			jumpTIme = 0;
+			isJump = false;
+		}
+		vPos.y += jumpHeight;
+
 	}
 	if(KEY_HOLD(KEY::UP))
 	{
@@ -58,12 +68,13 @@ void Player::Update()
 	{
 		vPos.x += 300.f * fDT;
 	}
-	else {
-		if (KEY_TAP(KEY::SPACE))
-		{
+	if (KEY_HOLD(KEY::SPACE))
+	{
+		if (GetisGround()) {
 			Jump();
 		}
 	}
+
 	SetPos(vPos);
 	GetAnimator()->Update();
 
@@ -72,6 +83,8 @@ void Player::Update()
 
 void Player::Jump()
 {
+	if (isJump) return;
+	isJump = true;
 	
 }
 
