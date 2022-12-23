@@ -4,7 +4,6 @@
 Platform::Platform()
 {
 
-
 }
 
 Platform::~Platform()
@@ -70,4 +69,25 @@ void Platform::StayCollision(Collider* _pOther)
         vObjPos.y -= fValue;
         pOtherObj->SetPos(vObjPos);
     }
+}
+
+void Platform::SetCollider()
+{
+    CreateCollider();
+    Vec2 pos = GetPos();
+    Vec2 scale = GetScale();
+    
+    GetCollider()->SetScale(Vec2(scale.x, scale.y));
+}
+
+void Platform::Render(HDC _dc)
+{
+    Vec2 pos = GetPos();
+    Vec2 scale = GetScale();
+    Rectangle(_dc,
+        (int)(pos.x - scale.x)  // left
+        , (int)(pos.y - scale.y / 2.f)  // top
+        , (int)(pos.x + scale.x)  // right
+        , (int)(pos.y + scale.y /2.f)); // bottom
+    Component_Render(_dc);
 }

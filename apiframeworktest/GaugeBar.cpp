@@ -19,6 +19,11 @@ void GaugeBar::Render(HDC _dc)
 void GaugeBar::Update()
 {
 	if(BarLenght.x < 0) ChangeScene(SCENE_TYPE::Dead);
-
+	
 	BarLenght.x -= 0.01f;
+}
+
+void GaugeBar::Release()
+{
+	BarLenght = Vec2(100, 20);
 }

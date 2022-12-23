@@ -79,10 +79,7 @@ void Object::Render(HDC _dc)
 
 void Object::SetCollider()
 {
-	Vec2 objScale = GetScale();
 
-	CreateCollider();
-	GetCollider()->SetScale(objScale);
 }
 
 void Object::Component_Render(HDC _dc)

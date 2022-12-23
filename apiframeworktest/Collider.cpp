@@ -40,9 +40,9 @@ void Collider::Render(HDC _dc)
 	SelectGDI b(_dc, BRUSH_TYPE::HOLLOW);
 
 	Rectangle(_dc
-		, (int)(m_vFinalPos.x - m_vScale.x / 2.f) // left
+		, (int)(m_vFinalPos.x - m_vScale.x ) // left
 		, (int)(m_vFinalPos.y - m_vScale.y / 2.f) // top
-		, (int)(m_vFinalPos.x + m_vScale.x / 2.f) // right
+		, (int)(m_vFinalPos.x + m_vScale.x) // right
 		, (int)(m_vFinalPos.y + m_vScale.y / 2.f)); // bottom
 	//SelectObject(_dc, hDefaultPen);
 	//SelectObject(_dc, hDefaultBrush);
