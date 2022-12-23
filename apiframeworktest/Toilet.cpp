@@ -44,3 +44,12 @@ void Toilet::Render(HDC _dc)
         , (int)(pos.y + scale.y / 2.f)); // bottom
     Component_Render(_dc);
 }
+
+void Toilet::SetCollider()
+{
+    CreateCollider();
+    Vec2 pos = GetPos();
+    Vec2 scale = GetScale();
+
+    GetCollider()->SetScale(Vec2(scale.x, scale.y));
+}

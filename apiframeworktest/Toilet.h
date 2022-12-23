@@ -19,5 +19,6 @@ public:
     void ExitCollision(Collider* _pOther) override;
     void StayCollision(Collider* _pOther) override;
     void Render(HDC _dc) override;
+    void SetCollider() override;
 };
 
