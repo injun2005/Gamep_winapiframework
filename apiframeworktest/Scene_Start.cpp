@@ -67,7 +67,6 @@ void Scene_Start::Enter()
 	platform5->SetCollider();
 	AddObject(platform5, GROUP_TYPE::PLATFORM);
 
-
 	Object* pObj = new Player;
 	pObj->SetName(L"Player");
 	pObj->SetPos(Vec2(20.f, vResolution.y / 2));
@@ -92,44 +91,6 @@ void Scene_Start::Enter()
 	pGoal->SetCollider();
 	AddObject(pGoal, GROUP_TYPE::GOAL);
 
-//	Object* pOtherPlayer = new Player(*(Player*)pObj);
-	/*Object* pOtherPlayer = pObj->Clone();
-	pOtherPlayer->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2.f + 100.f, Core::GetInst()->GetResolution().y / 2.f));
-	AddObject(pOtherPlayer, GROUP_TYPE::PLAYER);*/
-
-	//m_vecObj[(UINT)GROUP_TYPE::DEFAULT].push_back(pObj); 
-
-	// Monster Object 추가
-	//Monster* pMonsterObj = new Monster;
-	//pMonsterObj->SetPos(Vec2(640.f, 50.f));
-	//pMonsterObj->SetScale(Vec2(50.f, 50.f));
-	//pMonsterObj->SetCenterPos(pMonsterObj->GetPos());
-	//AddObject(pMonsterObj, GROUP_TYPE::MONSTER);
-
-	// 몬스터 배치
-	//int iMonster = 16;
-	//float fMoveDist = 25.f;
-	//float fObjScale = 50.f;
-	//float fTerm = (vResolution.x - ((fMoveDist + fObjScale /2.f) * 2)) / (float)(iMonster-1);
-	//Monster* pMonsterObj = nullptr;
-	//for (int i = 0; i < iMonster; i++)
-	//{
-	//	pMonsterObj = new Monster;
-	//	pMonsterObj->SetName(L"Monster");
-	//	pMonsterObj->SetPos(Vec2((fMoveDist + fObjScale / 2.f) + (float)i*fTerm, 50.f));
-	//	pMonsterObj->SetScale(Vec2(fObjScale, fObjScale));
-	//	pMonsterObj->SetCenterPos(pMonsterObj->GetPos());
-	//	pMonsterObj->SetMoveDistance(fMoveDist);
-	//	AddObject(pMonsterObj, GROUP_TYPE::MONSTER);
-	//}
-	//pObj = new Object;
-
-	//pObj->SetPos(Vec2(640.f, 384.f));
-	//pObj->SetScale(Vec2(100.f, 100.f));
-
-	//AddObject(pObj, GROUP_TYPE::DEFAULT);
-	// 충돌 지정 
-	// Player - Monster 그룹 간의 충돌 체크
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::BULLET_PLAYER, GROUP_TYPE::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::PLATFORM);
@@ -146,9 +107,5 @@ void Scene_Start::Exit()
 void Scene_Start::Update()
 {  
 	Scene::Update();
-	if (KEY_TAP(KEY::ENTER))
-	{
-		ChangeScene(SCENE_TYPE::SCENE_01);
-	}
 }
 
