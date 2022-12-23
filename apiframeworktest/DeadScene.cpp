@@ -11,10 +11,12 @@ DeadScene::~DeadScene()
 
 void DeadScene::Enter()
 {
+
 }
 
 void DeadScene::Exit()
 {
+
 }
 
 void DeadScene::Update()

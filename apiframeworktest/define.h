@@ -39,6 +39,7 @@ enum class KEY
 enum class GROUP_TYPE
 {
 	DEFAULT,
+	BACKGROUD,
 	PLAYER,
 	BULLET_PLAYER,
 	BULLET_MONSTER,
@@ -46,6 +47,7 @@ enum class GROUP_TYPE
 	PLATFORM,
 	GaugeBar,
 	TOILTET,
+	GOAL,
 	END = 32,
 };
 
@@ -56,6 +58,7 @@ enum class SCENE_TYPE
 	TOOL,
 	SCENE_02,
 	Dead,
+	CLEAR,
 	END,
 };
 
