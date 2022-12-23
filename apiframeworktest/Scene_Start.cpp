@@ -12,6 +12,7 @@
 #include "SceneMgr.h"
 #include "SoundMgr.h"
 #include "Platform.h"
+#include "Toilet.h"
 Scene_Start::Scene_Start()
 {
 }
@@ -28,7 +29,7 @@ void Scene_Start::Enter()
 
 	Object* platform = new Platform;
 	platform->SetPos(Vec2(vResolution.x/2, vResolution.y /2 + 200));
-	platform->SetScale(Vec2(1000.f, 20.f));
+	platform->SetScale(Vec2(250.f, 20.f));
 	platform->SetCollider();
 	AddObject(platform, GROUP_TYPE::PLATFORM);
 
@@ -37,11 +38,18 @@ void Scene_Start::Enter()
 	pObj->SetPos(Vec2(vResolution.x / 2, vResolution.y / 2));
 	pObj->SetScale(Vec2(100.f,100.f));
 	AddObject(pObj, GROUP_TYPE::PLAYER);
-
-	Object* pGBar = new GaugeBar;
+	GaugeBar* GBar = new GaugeBar;
+	Object* pGBar = GBar;
 	pGBar->SetPos(Vec2(1,1));
 	pGBar->SetScale(Vec2(100.f, 100.f));
 	AddObject(pGBar, GROUP_TYPE::GaugeBar);
+	Toilet* toilet = new Toilet;
+	toilet->SetGagueBar(GBar);
+	Object* pToilet = toilet;
+	pToilet->SetPos(Vec2(vResolution.x / 2 + 30,vResolution.y / 2 + 150));
+	pToilet->SetScale(Vec2(30, 50));
+	pToilet->SetCollider();
+	AddObject(pToilet, GROUP_TYPE::TOILTET);
 
 //	Object* pOtherPlayer = new Player(*(Player*)pObj);
 	/*Object* pOtherPlayer = pObj->Clone();
@@ -84,6 +92,7 @@ void Scene_Start::Enter()
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::BULLET_PLAYER, GROUP_TYPE::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::PLATFORM);
+	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::TOILTET);
 }
 
 void Scene_Start::Exit()
@@ -100,3 +109,4 @@ void Scene_Start::Update()
 		ChangeScene(SCENE_TYPE::SCENE_01);
 	}
 }
+

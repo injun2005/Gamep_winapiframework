@@ -45,6 +45,7 @@ enum class GROUP_TYPE
 	MONSTER,
 	PLATFORM,
 	GaugeBar,
+	TOILTET,
 	END = 32,
 };
 

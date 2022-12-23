@@ -1,20 +1,24 @@
 #pragma once
 #include "Object.h"
-class Platform :
+class GaugeBar;
+class Toilet :
     public Object
 {
-public:
-    Platform();
-    ~Platform();
-
 private:
-    CLONE(Platform);
+    GaugeBar* gagueBar;
+    CLONE(Toilet);
 public:
+    Toilet();
+    ~Toilet();
+public:
+    void SetGagueBar(GaugeBar *_bar) {
+        gagueBar = _bar;
+    }
     void Update() override;
     void EnterCollision(Collider* _pOther) override;
     void ExitCollision(Collider* _pOther) override;
     void StayCollision(Collider* _pOther) override;
-    void SetCollider() override;
     void Render(HDC _dc) override;
+    void SetCollider() override;
 };
 

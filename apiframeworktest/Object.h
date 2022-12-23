@@ -40,7 +40,7 @@ public:
 	virtual void	StayCollision(Collider* _pOther) {}
 	virtual void	EnterCollision(Collider* _pOther) {}
 	virtual void	ExitCollision(Collider* _pOther) {}
-	void SetCollider();
+	virtual void SetCollider();
 
 	void	Component_Render(HDC _dc);
 
