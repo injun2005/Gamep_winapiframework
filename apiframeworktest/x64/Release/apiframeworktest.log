@@ -1,12 +1,50 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output 디렉터리가 슬래시로 끝나지 않습니다. Output 디렉터리의 적절한 평가를 허용하는 데 필요하므로 이 빌드 인스턴스에서 슬래시를 추가합니다.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(505,5): warning MSB8004: Output 디렉터리가 슬래시로 끝나지 않습니다. Output 디렉터리의 적절한 평가를 허용하는 데 필요하므로 이 빌드 인스턴스에서 슬래시를 추가합니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: 중간 디렉터리(x64\Release\)에 다른 프로젝트(apiframeworktest.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  Animation.cpp
+  Animator.cpp
+  Background.cpp
+  Bullet.cpp
+D:\apiframeworktest1\apiframeworktest\Bullet.cpp(11,1): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  ClearScene.cpp
+  Collider.cpp
+  CollisionMgr.cpp
   Core.cpp
+  DeadScene.cpp
+  EventMgr.cpp
+  func.cpp
+  GaugeBar.cpp
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(9,30): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(10,31): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(23,31): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(23,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GoalObj.cpp
+  Image.cpp
+  KeyMgr.cpp
+  main.cpp
+  Monster.cpp
+  Object.cpp
   PathMgr.cpp
-LINK : warning C4727: 타임스탬프가 동일한 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\apiframeworktest.pch PCH가 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\keymgr.obj 및 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\image.obj에 있습니다.  첫 번째 PCH를 사용합니다.
-LINK : warning C4727: 타임스탬프가 동일한 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\apiframeworktest.pch PCH가 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\object.obj 및 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\monster.obj에 있습니다.  첫 번째 PCH를 사용합니다.
-LINK : warning C4727: 타임스탬프가 동일한 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\apiframeworktest.pch PCH가 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\scenemgr.obj 및 c:\users\user\source\repos\apiframeworktest\apiframeworktest\x64\release\scene.obj에 있습니다.  첫 번째 PCH를 사용합니다.
+D:\apiframeworktest1\apiframeworktest\PathMgr.cpp(17,35): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Platform.cpp
+  Player.cpp
+D:\apiframeworktest1\apiframeworktest\Player.cpp(31,20): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Res.cpp
+  ResMgr.cpp
+  Scene.cpp
+  SceneMgr.cpp
+  Scene_01.cpp
+  Scene_Start.cpp
+  SelectGDI.cpp
+  Sound.cpp
+  SoundMgr.cpp
+  TimeMgr.cpp
+  Toilet.cpp
+  Vec2.cpp
+D:\apiframeworktest1\apiframeworktest\Vec2.cpp(26,5): warning C4244: '초기화 중': 'long'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\Vec2.cpp(27,5): warning C4244: '초기화 중': 'long'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BWindow.cpp
   코드를 생성하고 있습니다.
-  12 of 293 functions ( 4.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    5 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB not found, fall back to full compilation.
+  All 1055 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   코드를 생성했습니다.
-  apiframeworktest.vcxproj -> C:\Users\user\source\repos\apiframeworktest\OutPut\bin\apiframeworktest.exe
+  apiframeworktest.vcxproj -> D:\apiframeworktest1\OutPut\bin\Gamep_winapiframework.exe
