@@ -1,12 +1,11 @@
-    #pragma once
+#pragma once
 #include "Scene.h"
-class DeadScene :
+class ClearScene :
     public Scene
 {
 public:
-    DeadScene();
-    ~DeadScene();
-
+    ClearScene();
+    ~ClearScene();
 public:
     virtual void Enter() override;
     virtual void Exit() override;

@@ -46,6 +46,7 @@ enum class GROUP_TYPE
 	PLATFORM,
 	GaugeBar,
 	TOILTET,
+	GOAL,
 	END = 32,
 };
 
@@ -56,6 +57,7 @@ enum class SCENE_TYPE
 	TOOL,
 	SCENE_02,
 	Dead,
+	CLEAR,
 	END,
 };
 

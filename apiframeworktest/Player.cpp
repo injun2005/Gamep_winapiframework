@@ -5,6 +5,7 @@
 #include "Bullet.h"
 #include "SceneMgr.h"
 #include "Scene.h"
+#include "Core.h"
 #include "Image.h"
 #include "PathMgr.h"
 #include "ResMgr.h"
@@ -36,6 +37,9 @@ Player::~Player()
 void Player::Update()
 {
 	Vec2 vPos = GetPos();
+	if (vPos.y >= Core::GetInst()->GetResolution().y) {
+		ChangeScene(SCENE_TYPE::Dead);
+	}
 	float gravity = GetGravity();
 	if (!GetisGround()) {
 		SetGravity(gravity + 1 * fDT);
@@ -50,14 +54,6 @@ void Player::Update()
 		}
 		vPos.y += jumpHeight;
 
-	}
-	if(KEY_HOLD(KEY::UP))
-	{
-		vPos.y -= 300.f * fDT;
-	}
-	if (KEY_HOLD(KEY::DOWN))
-	{
-		vPos.y += 300.f * fDT;
 	}
 	if (KEY_HOLD(KEY::LEFT))
 	{
@@ -115,6 +111,7 @@ void Player::Render(HDC _dc)
 
 void Player::EnterCollision(Collider* _pOther)
 {
+
 }
 
 void Player::StayCollision(Collider* _pOther)
