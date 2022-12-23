@@ -194,6 +194,10 @@
     <ClInclude Include="Platform.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="ClearScene.h" />
+    <ClInclude Include="GoalObj.h" />
+    <ClInclude Include="Toilet.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="apiframeworktest.rc">
@@ -295,5 +299,9 @@
     <ClCompile Include="Platform.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
+    <ClCompile Include="Background.cpp" />
+    <ClCompile Include="ClearScene.cpp" />
+    <ClCompile Include="GoalObj.cpp" />
+    <ClCompile Include="Toilet.cpp" />
   </ItemGroup>
 </Project>
