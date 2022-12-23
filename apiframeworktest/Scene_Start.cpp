@@ -12,6 +12,8 @@
 #include "SceneMgr.h"
 #include "SoundMgr.h"
 #include "Platform.h"
+#include "Background.h"
+
 Scene_Start::Scene_Start()
 {
 }
@@ -21,10 +23,15 @@ Scene_Start::~Scene_Start()
 }
 void Scene_Start::Enter()
 {
-	SoundMgr::GetInst()->LoadSound(L"BGM", true, L"Sound\\pianobgm.wav");
+	SoundMgr::GetInst()->LoadSound(L"BGM", true, L"Sound\\BackGroundMusic.wav");
 	SoundMgr::GetInst()->Play(L"BGM");
 
 	Vec2 vResolution(Vec2(Core::GetInst()->GetResolution()));
+
+	Object* background = new Background;
+	background->SetPos(Vec2(0,0));
+	background->SetScale(Vec2(1920, 1080));
+	AddObject(background, GROUP_TYPE::BACKGROUD);
 
 	Object* platform = new Platform;
 	platform->SetPos(Vec2(vResolution.x/2, vResolution.y /2 + 200));
