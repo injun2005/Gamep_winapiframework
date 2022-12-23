@@ -12,8 +12,13 @@
 #include "SceneMgr.h"
 #include "SoundMgr.h"
 #include "Platform.h"
+<<<<<<< HEAD
 #include "Toilet.h"
 #include "GoalObj.h"
+=======
+#include "Background.h"
+
+>>>>>>> background
 Scene_Start::Scene_Start()
 {
 }
@@ -23,12 +28,18 @@ Scene_Start::~Scene_Start()
 }
 void Scene_Start::Enter()
 {
-	SoundMgr::GetInst()->LoadSound(L"BGM", true, L"Sound\\pianobgm.wav");
+	SoundMgr::GetInst()->LoadSound(L"BGM", true, L"Sound\\BackGroundMusic.wav");
 	SoundMgr::GetInst()->Play(L"BGM");
 
 	Vec2 vResolution(Vec2(Core::GetInst()->GetResolution()));
-
 	Vec2 vRHalf = Vec2(vResolution.x / 2, vResolution.y / 2);
+
+	Object* background = new Background;
+	background->SetPos(Vec2(0,0));
+	background->SetScale(Vec2(1920, 1080));
+	AddObject(background, GROUP_TYPE::BACKGROUD);
+
+
 	Object* platform = new Platform;
 	platform->SetPos(Vec2(0.f, vRHalf.y + 200));
 	platform->SetScale(Vec2(100.f, 20.f));
