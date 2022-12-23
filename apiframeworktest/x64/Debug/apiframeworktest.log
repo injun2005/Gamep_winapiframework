@@ -1,25 +1,32 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(apiframeworktest.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
   Animation.cpp
   Animator.cpp
+  Background.cpp
   Bullet.cpp
 D:\apiframeworktest1\apiframeworktest\Bullet.cpp(11,1): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  ClearScene.cpp
   Collider.cpp
   CollisionMgr.cpp
   Core.cpp
   DeadScene.cpp
   EventMgr.cpp
+  func.cpp
   GaugeBar.cpp
-D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(16,43): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(16,30): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(9,30): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(10,31): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(23,31): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(23,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GoalObj.cpp
   Image.cpp
   KeyMgr.cpp
+  main.cpp
   Monster.cpp
   Object.cpp
   PathMgr.cpp
 D:\apiframeworktest1\apiframeworktest\PathMgr.cpp(17,35): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Platform.cpp
   Player.cpp
-D:\apiframeworktest1\apiframeworktest\Player.cpp(29,20): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\Player.cpp(31,20): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Res.cpp
   ResMgr.cpp
   Scene.cpp
@@ -30,11 +37,9 @@ D:\apiframeworktest1\apiframeworktest\Player.cpp(29,20): warning C4267: '인수'
   Sound.cpp
   SoundMgr.cpp
   TimeMgr.cpp
+  Toilet.cpp
   Vec2.cpp
 D:\apiframeworktest1\apiframeworktest\Vec2.cpp(26,5): warning C4244: '초기화 중': 'long'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 D:\apiframeworktest1\apiframeworktest\Vec2.cpp(27,5): warning C4244: '초기화 중': 'long'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  func.cpp
-  main.cpp
-  LINK : D:\apiframeworktest1\OutPut\bin_debug\Gamep_winapiframework.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
-Scene_Start.obj : error LNK2019: "public: __cdecl Toilet::Toilet(void)" (??0Toilet@@QEAA@XZ)"public: virtual void __cdecl Scene_Start::Enter(void)" (?Enter@Scene_Start@@UEAAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-D:\apiframeworktest1\OutPut\bin_debug\Gamep_winapiframework.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
+  BWindow.cpp
+  apiframeworktest.vcxproj -> D:\apiframeworktest1\OutPut\bin_debug\Gamep_winapiframework.exe

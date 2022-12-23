@@ -54,7 +54,6 @@ void Player::Update()
 			isJump = false;
 		}
 		vPos.y += jumpHeight;
-
 	}
 	if (KEY_HOLD(KEY::LEFT))
 	{
