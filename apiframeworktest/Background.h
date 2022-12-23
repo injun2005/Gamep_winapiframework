@@ -1,6 +1,9 @@
 #pragma once
 #include "Object.h"
 #include "Image.h"
+#include "GaugeBar.h"
+#include "ResMgr.h"
+
 class Background :
     public Object
 {

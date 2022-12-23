@@ -2,6 +2,7 @@
 #include "BWindow.h"
 #include "Core.h"
 #include "Resource.h"
+
 BWindow::BWindow() : m_hWnd(0), m_hInstance(0)
 {
 }
@@ -89,6 +90,10 @@ int BWindow::MessageLoop()
 		{
 			if (WM_QUIT == msg.message)
 				break;
+			/*if (WM_WTSSESSION_CHANGE == msg.message)
+			{
+				OutputDebugStringW(L"µé¾î¿È");
+			}*/
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 		}
