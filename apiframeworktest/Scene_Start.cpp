@@ -12,13 +12,10 @@
 #include "SceneMgr.h"
 #include "SoundMgr.h"
 #include "Platform.h"
-<<<<<<< HEAD
 #include "Toilet.h"
 #include "GoalObj.h"
-=======
 #include "Background.h"
 
->>>>>>> background
 Scene_Start::Scene_Start()
 {
 }
