@@ -15,6 +15,7 @@
 #include "Toilet.h"
 #include "GoalObj.h"
 #include "Background.h"
+#include "heart.h"
 
 Scene_Start::Scene_Start()
 {
@@ -74,12 +75,19 @@ void Scene_Start::Enter()
 	pObj->SetScale(Vec2(100.f,100.f));
 	AddObject(pObj, GROUP_TYPE::PLAYER);
 	GaugeBar* GBar = new GaugeBar;
+
 	Object* pGBar = GBar;
 	pGBar->SetPos(Vec2(1,1));
 	pGBar->SetScale(Vec2(100.f, 100.f));
 	AddObject(pGBar, GROUP_TYPE::GaugeBar);
 	Toilet* toilet = new Toilet;
 	toilet->SetGagueBar(GBar);
+
+	/*Object* heartOBJ = new heart;
+	heartOBJ->SetPos(Vec2(1, 1));
+	heartOBJ->SetScale(Vec2(1, 1));
+	AddObject(heartOBJ, GROUP_TYPE::Heart);*/
+
 	Object* pToilet = toilet;
 	pToilet->SetPos(Vec2(vResolution.x / 2 + 30,vResolution.y / 2 + 150));
 	pToilet->SetScale(Vec2(30, 50));

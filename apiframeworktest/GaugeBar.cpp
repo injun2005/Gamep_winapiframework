@@ -4,7 +4,7 @@
 
 GaugeBar::GaugeBar() : BarLenght(100,20)
 {
-	pImg = ResMgr::GetInst()->ImgLoad(L"GaugeBar", L"Image\\cloud.bmp");
+	pImg = ResMgr::GetInst()->ImgLoad(L"GaugeBar", L"Image\\GaugeBar.bmp");
 
 	BarLenght.x = pImg->GetWidth();
 	BarLenght.y = pImg->GetHeight();
@@ -31,10 +31,11 @@ void GaugeBar::Update()
 {
 	if(BarLenght.x < 0) ChangeScene(SCENE_TYPE::Dead);
 	
-	BarLenght.x -= 0.01f;
+	BarLenght.x -= 0.3f;
 }
 
 void GaugeBar::Release()
 {
-	BarLenght = Vec2(100, 20);
+	BarLenght.x = pImg->GetWidth();
+	BarLenght.y = pImg->GetHeight();
 }
