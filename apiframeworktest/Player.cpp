@@ -16,7 +16,8 @@ Player::Player() : isJump(false), jumpTIme(0)
 {
 	// collider 새성
 	CreateCollider();
-	GetCollider()->SetScale(Vec2(30.f, 10.f));
+	GetCollider()->SetScale(Vec2(10.f, 10.f));
+	GetCollider()->SetOffsetPos(Vec2(10.f, -30.f));
 	// image 업로드
 	Image* pImg = ResMgr::GetInst()->ImgLoad(L"PlayerAni", L"Image\\jiwoo.bmp");
 	// animator 생성 및 animation 사용
@@ -53,7 +54,6 @@ void Player::Update()
 			isJump = false;
 		}
 		vPos.y += jumpHeight;
-
 	}
 	if (KEY_HOLD(KEY::LEFT))
 	{
