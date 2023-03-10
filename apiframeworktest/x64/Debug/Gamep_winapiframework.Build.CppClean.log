@@ -35,10 +35,13 @@ d:\apiframeworktest1\apiframeworktest\x64\debug\timemgr.obj
 d:\apiframeworktest1\apiframeworktest\x64\debug\toilet.obj
 d:\apiframeworktest1\apiframeworktest\x64\debug\vec2.obj
 d:\apiframeworktest1\apiframeworktest\x64\debug\bwindow.obj
-d:\apiframeworktest1\output\bin_debug\gamep_winapiframework.ilk
 d:\apiframeworktest1\output\bin_debug\gamep_winapiframework.exe
+d:\apiframeworktest1\output\bin_debug\gamep_winapiframework.ilk
 d:\apiframeworktest1\output\bin_debug\gamep_winapiframework.pdb
 d:\apiframeworktest1\apiframeworktest\x64\debug\apiframeworktest.res
+d:\apiframeworktest1\apiframeworktest\x64\debug\gameclearobj.obj
+d:\apiframeworktest1\apiframeworktest\x64\debug\gameoverobj.obj
+d:\apiframeworktest1\apiframeworktest\x64\debug\heart.obj
 d:\apiframeworktest1\apiframeworktest\x64\debug\gamep_wi.dcd48bbd.tlog\cl.command.1.tlog
 d:\apiframeworktest1\apiframeworktest\x64\debug\gamep_wi.dcd48bbd.tlog\cl.read.1.tlog
 d:\apiframeworktest1\apiframeworktest\x64\debug\gamep_wi.dcd48bbd.tlog\cl.write.1.tlog

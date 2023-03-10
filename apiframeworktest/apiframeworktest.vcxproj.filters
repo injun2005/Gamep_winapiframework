@@ -198,6 +198,15 @@
     <ClInclude Include="ClearScene.h" />
     <ClInclude Include="GoalObj.h" />
     <ClInclude Include="Toilet.h" />
+    <ClInclude Include="GameClearObj.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverObj.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="heart.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="apiframeworktest.rc">
@@ -303,5 +312,14 @@
     <ClCompile Include="ClearScene.cpp" />
     <ClCompile Include="GoalObj.cpp" />
     <ClCompile Include="Toilet.cpp" />
+    <ClCompile Include="GameClearObj.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverObj.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="heart.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

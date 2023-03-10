@@ -12,12 +12,21 @@ D:\apiframeworktest1\apiframeworktest\Bullet.cpp(11,1): warning C4305: '초기�
   DeadScene.cpp
   EventMgr.cpp
   func.cpp
+  GameClearObj.cpp
+D:\apiframeworktest1\apiframeworktest\GameClearObj.cpp(27,9): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GameClearObj.cpp(26,9): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GameOverObj.cpp
+D:\apiframeworktest1\apiframeworktest\GameOverObj.cpp(28,9): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GameOverObj.cpp(27,9): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   GaugeBar.cpp
 D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(9,30): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(10,31): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(23,31): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(23,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(39,30): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\apiframeworktest1\apiframeworktest\GaugeBar.cpp(40,31): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   GoalObj.cpp
+  heart.cpp
   Image.cpp
   KeyMgr.cpp
   main.cpp
@@ -45,6 +54,6 @@ D:\apiframeworktest1\apiframeworktest\Vec2.cpp(27,5): warning C4244: '초기화 
   BWindow.cpp
   코드를 생성하고 있습니다.
   Previous IPDB not found, fall back to full compilation.
-  All 1055 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 1078 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   코드를 생성했습니다.
   apiframeworktest.vcxproj -> D:\apiframeworktest1\OutPut\bin\Gamep_winapiframework.exe
